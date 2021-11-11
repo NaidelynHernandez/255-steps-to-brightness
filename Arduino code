@@ -1,0 +1,27 @@
+int potPin=A7;
+int ledpin=2;
+int potVal=0;;
+int ledBright;
+
+void setup() {
+  // put your setup code here, to run once:
+ Serial.begin(9600);
+ pinMode(ledpin,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+potVal= analogRead(potPin); // val between 0-1023
+
+
+//digitalWrite(ledpin,HIGH);
+//delay(potVal);
+//digitalWrite(ledpin,LOW);
+//delay(potVal);
+
+ledBright=potVal/4;
+analogWrite(ledpin,ledBright);
+delay(2);
+Serial.println(potVal);
+
+}
