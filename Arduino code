@@ -21,7 +21,7 @@ potVal= analogRead(potPin); // val between 0-1023
 
 ledBright=potVal/4;
 analogWrite(ledpin,ledBright);
-delay(2);
+delay(200);
 Serial.println(potVal);
 
 }
